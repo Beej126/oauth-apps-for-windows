@@ -1,3 +1,7 @@
+# reason for fork
+switching from external browser to embedded webView2
+
+# original readme...
 OAuth for Apps: Samples for Windows
 ============
 
