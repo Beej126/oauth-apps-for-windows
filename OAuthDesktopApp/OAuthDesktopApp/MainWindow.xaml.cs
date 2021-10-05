@@ -81,7 +81,8 @@ namespace OAuthApp
                 code_challenge_method);
 
             // Opens request in the browser.
-            System.Diagnostics.Process.Start(authorizationRequest);
+            //fixes: System.Diagnostics.Process.Start(authorizationRequest);
+            wv2.Source = new Uri(authorizationRequest);
 
             // Waits for the OAuth authorization response.
             var context = await http.GetContextAsync();
@@ -272,5 +273,9 @@ namespace OAuthApp
             return base64;
         }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            wv2.Source = new Uri("https://google.com");
+        }
     }
 }

@@ -18,17 +18,21 @@ limitations under the License.
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
         xmlns:local="clr-namespace:OAuthApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525"
+        Title="MainWindow" Height="800" Width="750"
         >
-    <Grid>
-        <Button x:Name="button" HorizontalAlignment="Left" Margin="18,22,0,0" VerticalAlignment="Top" Width="206" Height="46" Click="button_Click"
+  <Grid Margin="0,0,0,0">
+    <Button x:Name="button" HorizontalAlignment="Left" Margin="18,22,0,0" VerticalAlignment="Top" Width="206" Height="46" Click="button_Click"
                 BorderThickness="0" Padding="0" Background="Transparent">
-            <Image Source="Assets/btn_google_sign-in.png" Stretch="UniformToFill"/>
-        </Button>
-        <TextBox x:Name="textBoxOutput" HorizontalAlignment="Left" Height="209" Margin="22,89,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="470"
+      <Image Source="Assets/btn_google_sign-in.png" Stretch="UniformToFill"/>
+    </Button>
+    <Button Width="206" Height="46" Click="Button_Click_1" Margin="276,22,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">Reload google.com</Button>
+    <TextBox x:Name="textBoxOutput" HorizontalAlignment="Left" Height="209" Margin="22,89,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="470"
          IsReadOnly="True" ScrollViewer.VerticalScrollBarVisibility="Auto"
-         />
-    </Grid>
+     />
+    <wv2:WebView2 Name="wv2" Source="https://google.com" Margin="22,318,25,22" />
+
+  </Grid>
 </Window>
